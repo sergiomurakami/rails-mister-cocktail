@@ -6,6 +6,8 @@ git_source(:github) do |repo_name|
 end
 
 ruby '2.4.3'
+
+gem 'figaro'
 gem 'font_awesome'
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
