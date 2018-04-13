@@ -1,4 +1,4 @@
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://source.unsplash.com/featured/?cocktail')">
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://source.unsplash.com/featured/?shot, cocktail')">
   <div class="banner-content">
     <h1>Le Wagon Cocktails - Melbourne</h1>
     <p>Learn how to prepare amazing cocktails</p>
@@ -14,13 +14,13 @@
         <div class="col-4">
           <div class="cocktail-card">
             <%= link_to cocktail_path(cocktail) do %>
-              <img class="card-img-top" src="https://source.unsplash.com/featured/?cocktail" alt="Card image cap">
+              <%= cl_image_tag cocktail.photo, width: 220, height: 300, crop: :fill, class:"card-img-top", alt:"Card image cap" %>
             <% end %>
             <div class="cocktail-card-content">
               <div class="cocktail-card-title">
-                <h5 class="card-title"><i class="fas fa-glass-martini"></i><%= cocktail.name %></h5>
+                <h5 class="card-title"><p><i class="fas fa-glass-martini"></i> <%= cocktail.name %></p></h5>
               </div>
-              <p>Test ABC 123<%= cocktail.name %></p>
+              <p>Description of <%= cocktail.name %></p>
             </div>
           </div>
         </div>
