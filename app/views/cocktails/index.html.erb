@@ -5,6 +5,12 @@
   </div>
 </div>
 
+<div class="container">
+  <% if @cocktails.blank? %>
+    <h2>Sorry. There are no cocktails containing the term <%= params[:search] %>.</h2>
+  <% end %>
+</div>
+
 <div class="container mt-3">
   <form action="row">
     <div class="row">

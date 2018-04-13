@@ -5,4 +5,10 @@ class Cocktail < ApplicationRecord
   mount_uploader :photo, PhotoUploader
 
   validates :name, uniqueness: true, presence: true
+
+
+  def self.search(search)
+    where("name ILIKE ?", "%#{search}%")
+  end
+
 end
